@@ -18,7 +18,7 @@ c = conn.cursor()
 def create_usertable():
 	c.execute('CREATE TABLE IF NOT EXISTS userstable(username TEXT,password TEXT)')
 
-#if the username is new then it will store that usernsame and its corresponding password into the table
+#if the username is new then it will store that username and its corresponding password into the table
 def add_userdata(username,password):
 	c.execute('INSERT INTO userstable(username,password) VALUES (?,?)',(username,password))
 	conn.commit()
